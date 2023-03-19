@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+@import '_cdn.scss';
+
+@import '_mixins.scss';
+
+@import '_variables.scss';
+
+@import url(./header.scss);
+
+@import url(./banner.scss);
+
+@import url(./features.scss);
+
+@import url(./work.scss);
+
+@import url(./team.scss);
+
+@import url(./testimonial.scss);
+
+@import url(./download.scss);
+
+@import url(./footer.scss);
