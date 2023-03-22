@@ -1,0 +1,29 @@
+@mixin h1{
+    font-family: 'Raleway-Black';
+    font-size: 64px;
+    line-height: 75px;
+}
+
+@mixin h6{
+    font-family: 'Raleway-Bold';
+    font-size: 13px;
+    line-height: 15px;
+}
+
+@mixin mainSubtitle {
+    font-family: 'Raleway-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../assets/fonts/Raleway-Regular.ttf);
+    font-size: 24px;
+    line-height: 28px;
+}
+
+@mixin title {
+    font-family: 'Raleway-Black';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../assets/fonts/Raleway-Black.ttf);
+    font-size: 24px;
+    line-height: 28px;
+}

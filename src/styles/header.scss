@@ -1,0 +1,56 @@
+@import '_cdn.scss';
+
+@import '_mixins.scss';
+
+@import '_variables.scss';
+
+.header {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    z-index: 2;
+    margin: 0 auto;
+}
+
+.header-wrap {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #BABBC5;
+}
+
+.header__logo {
+    flex-direction: column;
+    align-self: center;
+    margin-right: 266px;
+}
+
+.header__link{
+    align-self: center;
+    margin: 36px 0;    
+
+}
+
+.header__link li{
+    display: inline;
+    text-transform: uppercase;
+}
+
+.header__link a{
+    color: $white;
+    padding: 36px 20px;
+    @include h6;
+}
+
+.header__link a:hover{
+    border-bottom: $border-bottom_hover;
+}
+
+.header__link a:active{
+    color: $deep-red;
+    border-bottom: $border-bottom_active; 
+}
