@@ -5,7 +5,7 @@
 @import '_variables.scss';
 
 .banner {
-    background-image: url(/src/assets/images/banner-img.jpg);
+    background-image: url(../assets/images/banner-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,15 +20,14 @@
     height: 100%;
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(37, 43, 73, .8);
+    left: 0;
+    background-color: rgba(37, 43, 73, .8);
     mix-blend-mode: normal;
     z-index: -1;
 }
 
 .banner-wrap {
-    width: 1170px;
+    max-width: 1170px;
     height: 100vh;
     padding: 0 15px;
     margin: 0 auto;
@@ -48,7 +47,6 @@
 }
 
 .banner__subtitle p {
-    @include mainSubtitle;
     color: $white;
     text-align: center;
     margin-bottom: 82px;
@@ -64,15 +62,14 @@
 
 .banner__button a {
     color: $white;
-    @include title;
 }
 
-.banner__button a:hover {
+.banner__button :hover {
     background-color: $deep-red;
     cursor: pointer;
 }
 
-.banner__button a:active {
+.banner__button :active {
     background-color: $red;
     box-shadow: 4px 4px 30px $red;
 }

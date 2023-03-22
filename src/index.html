@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.scss" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Document</title>
 </head>
 
@@ -16,7 +17,7 @@
                 <img src="./assets/images/ACTIVE.svg" alt="banner_icon">
                 <img src="./assets/images/BOX.svg" alt="banner_icon">
             </div>
-            <div class="header__link">
+            <nav class="header__link">
                 <ul>
                     <li><a href="#features">features</a></li>
                     <li><a href="#works">works</a></li>
@@ -24,7 +25,7 @@
                     <li><a href="#testimonials">testimonials</a></li>
                     <li><a href="#download">download</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
     </header>
     <main>
@@ -32,8 +33,7 @@
             <div class="banner-wrap">
                 <div class="banner__title">
                     <h1>
-                        Your Favorite One Page
-                        Multi Purpose Template
+                        Your Favorite One PageMulti Purpose Template
                     </h1>
                 </div>
                 <div class="banner__subtitle">
@@ -137,29 +137,61 @@
             </div>
         </section>
         <section class="work" id="works">
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_1.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_2.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_3_fon.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_4.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_5.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_6.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_7.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
-            <div>
+            <div class="work-image">
                 <img src="./assets/images/work_8.jpg" alt="work_img">
+                <div class="work-text">
+                    <h5>Project Name</h5>
+                    <span>User Interface Design</span>
+                </div>
             </div>
         </section>
         <section class="team" id="our team">
@@ -251,7 +283,16 @@
             </div>
         </section>
         <section class="testimonial" id="testimonials">
-
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </section>
         <section class="download" id="download">
             <div class="download-wrap">
@@ -295,8 +336,8 @@
                         About ActiveBox
                     </h5>
                     <p class="about__text">
-                        Cras justo odio, dapibus ac facilisis in, 
-                        egestas eget quam. Donec ullamcorper 
+                        Cras justo odio, dapibus ac facilisis in,
+                        egestas eget quam. Donec ullamcorper
                         nulla non metus auctor fringilla.
                     </p>
                 </div>
@@ -308,7 +349,7 @@
         </div>
 
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script type="module" src="./js/index.js"></script>
 </body>
 

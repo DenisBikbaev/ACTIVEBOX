@@ -12,5 +12,14 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisBikbaev/FE-102-Front-End-Denis-Bikbaev-Homework-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DenisBikbaev/FE-102-Front-End-Denis-Bikbaev-Homework-2/issues"
+  },
+  "homepage": "https://github.com/DenisBikbaev/FE-102-Front-End-Denis-Bikbaev-Homework-2#readme"
 }

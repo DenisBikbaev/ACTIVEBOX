@@ -1,0 +1,36 @@
+@import '_cdn.scss';
+
+@import '_mixins.scss';
+
+@import '_variables.scss';
+
+.work {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.work-image {
+    position: relative;
+    z-index: 1;
+}
+
+.work-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    display: none;
+}
+
+.work-image:hover, .work-image::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $red;
+    color: black;
+}
