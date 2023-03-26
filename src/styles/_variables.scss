@@ -9,16 +9,32 @@ $light-black: #2D3033;
 $red: #FF4343;
 $deep-red: #E71414;
 $black: #000000;
+$silver: #C6CBCD;
+$blue: #353C65;
+$deep-blue: #2C3154;
 
 //font-size
 
 $_13px: 0.8125rem;
-$_64px: 4rem;
 $_24px: 1.5rem;
 $_18px: 1.125rem;
 $_30px: 1.875rem;
+$_36px: 2.25rem;
+$_64px: 4rem;
 
 //border
 
 $border-bottom_hover: 2px solid $light-grey;
 $border-bottom_active: 2px solid $deep-red;
+$border-img: 2px solid #FFFFFF;
+$border-fa: 1px solid #C6CBCD;
+
+//templates
+
+%fa-links {
+    border: $border-fa;
+    width: 39px;
+    height: 39px;
+    padding: 10px 10px;
+    color: $silver;
+}

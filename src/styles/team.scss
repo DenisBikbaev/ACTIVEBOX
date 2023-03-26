@@ -1,0 +1,45 @@
+@import '_cdn.scss';
+
+@import '_mixins.scss';
+
+@import '_variables.scss';
+
+.team-wrap {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 114px;
+    margin-bottom: 114px;
+    justify-content: space-between;
+    gap: 30px;
+
+    .team-card__img {
+        margin-bottom: 30px;
+    }
+
+    .team-card__name {
+        @include font(700, $_24px, 28px);
+        margin-bottom: 6px;
+    }
+
+    .team-card__post {
+        @include font(400, $_18px, 21px);
+        text-transform: uppercase;
+        color: $red;
+        margin-bottom: 18px
+    }
+
+    .team-card__text {
+        @include font(400, $_18px, 21px);
+        margin-bottom: 38px;
+    }
+
+    .team-card__links {
+        font-size: $_18px;
+    }
+
+    .fa-brands {
+        @extend %fa-links;
+    }
+}

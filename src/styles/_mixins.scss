@@ -1,11 +1,13 @@
-@mixin h1 {
-    font-family: 'Raleway-Black';
-    font-size: 64px;
-    line-height: 75px;
+@mixin font($fw, $fz, $lh) {
+    font-family: 'Raleway';
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
 }
 
-@mixin h6 {
-    font-family: 'Raleway-Bold';
-    font-size: 13px;
-    line-height: 15px;
+@mixin fontCardo($fw, $fz, $lh){
+    font-family: 'Cardo';
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
 }

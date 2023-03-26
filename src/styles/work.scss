@@ -8,29 +8,59 @@
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-template-rows: repeat(2, 1fr);
-}
 
-.work-image {
-    position: relative;
-    z-index: 1;
-}
+    &-image {
+        position: relative;
+        z-index: 1;
 
-.work-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-    display: none;
-}
+        .project__img {
+            width: 100%;
+            height: 100%;
+        }
 
-.work-image:hover, .work-image::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: $red;
-    color: black;
+        .image-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+            z-index: 2;
+            opacity: 0;
+            transition: 0.2s;
+
+            .text__name {
+                @include font(900, $_24px, 28px);
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                color: $white;
+                padding: 20px 0;
+                margin-top: 33%;
+            }
+
+            .text__about {
+                @include font(400, $_18px, 21px);
+                color: $white;
+            }
+        }
+
+        &:hover {
+            .image-text {
+                background-color: $red;
+                border: $border-img;
+                cursor: pointer;
+                opacity: 0.8;
+                transition: 0.2s;
+            }
+        }
+
+        &:active {
+            .image-text {
+                background: rgba(185, 12, 12, 0.8);
+                transition: 0.2s;
+            }
+        }
+    }
 }

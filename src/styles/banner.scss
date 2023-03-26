@@ -11,65 +11,72 @@
     background-size: cover;
     position: relative;
     z-index: 1;
-}
 
-.banner::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(37, 43, 73, .8);
-    mix-blend-mode: normal;
-    z-index: -1;
-}
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(37, 43, 73, .8);
+        mix-blend-mode: normal;
+        z-index: -1;
+    }
 
-.banner-wrap {
-    max-width: 1170px;
-    height: 100vh;
-    padding: 0 15px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
+    &-wrap {
+        max-width: 1170px;
+        height: 100vh;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
 
-.banner__title h1 {
-    @include h1;
-    color: $white;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 230px;
-    margin-bottom: 32px;
-}
+        .banner__title {
+            h1 {
+                @include font(900, $_64px, 75px);
+                color: $white;
+                text-align: center;
+                text-transform: uppercase;
+                margin-top: 230px;
+                margin-bottom: 32px;
+            }
+        }
 
-.banner__subtitle p {
-    color: $white;
-    text-align: center;
-    margin-bottom: 82px;
-}
+        .banner__subtitle {
+            p {
+                color: $white;
+                text-align: center;
+                margin-bottom: 82px;
+                @include font(400, $_24px, 28px);
+            }
+        }
 
-.banner__button {
-    margin-bottom: 120px;
-    text-align: center;
-    width: 396px;
-    background-color: $red;
-    padding: 26px 0;
-}
+        .banner__button {
+            margin-bottom: 120px;
+            text-align: center;
+            width: 396px;
+            background-color: $red;
+            padding: 26px 0;
+            @include font(900, $_24px, 28px);
 
-.banner__button a {
-    color: $white;
-}
+            a {
+                color: $white;
+            }
 
-.banner__button :hover {
-    background-color: $deep-red;
-    cursor: pointer;
-}
+            &:hover {
+                background-color: $deep-red;
+                cursor: pointer;
+            }
 
-.banner__button :active {
-    background-color: $red;
-    box-shadow: 4px 4px 30px $red;
+            &:active {
+                background-color: $red;
+                box-shadow: 4px 4px 30px $red;
+            }
+        }
+
+    }
 }

@@ -1,0 +1,58 @@
+@import '_cdn.scss';
+
+@import '_mixins.scss';
+
+@import '_variables.scss';
+
+.download {
+    &-wrap {
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 114px;
+        margin-bottom: 114px;
+
+        .download__title {
+            h3 {
+                @include font(500, $_30px, 35px);
+                color: $black;
+                padding: 17.5px 0;
+                margin-bottom: 5px;
+            }
+        }
+
+        .download__subtitle {
+            p {
+                @include font(700, $_18px, 21px);
+                text-transform: uppercase;
+                margin-bottom: 48px;
+            }
+        }
+
+        .download__button {
+            width: 370px;
+            text-align: center;
+            background-color: $red;
+            padding: 26px 0;
+            @include font(900, $_18px, 21px);
+            text-transform: uppercase;
+
+            a {
+                color: $white;
+            }
+
+            &:hover {
+                background-color: $deep-red;
+                cursor: pointer;
+            }
+
+            &:active {
+                background-color: $red;
+                box-shadow: 4px 4px 30px $red;
+            }
+        }
+    }
+}

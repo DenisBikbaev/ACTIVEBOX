@@ -1,0 +1,29 @@
+@import '_cdn.scss';
+
+@import '_mixins.scss';
+
+@import '_variables.scss';
+
+.footer {
+    background-color: $deep-blue;
+
+    &-wrap {
+        max-width: 1170px;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        padding: 24px 0;
+
+        .copyright {
+            max-width: 370px;
+            text-align: center;
+            @include font(400, $_18px, 21px);
+            color: $deep-grey;
+
+            span {
+                color: $white;
+            }
+        }
+    }
+}
