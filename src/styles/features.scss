@@ -25,11 +25,55 @@
 
             .cadr__title {
                 margin-bottom: 20px;
-                @include font(900, $_24px, 28px);
+                @include fontRaleway(900, $_24px, 28px);
             }
 
             .card__text {
-                @include font(400, $_18px, 21px);
+                @include fontRaleway(400, $_18px, 21px);
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .features {
+        &-wrap {
+            padding: 0 20px;
+            margin-top: 89px;
+            margin-bottom: 80px;
+
+            .features-card {
+                .cadr__title {
+                    margin-bottom: 20px;
+                    @include fontRaleway(900, $_18px, 21px);
+                }
+
+                .card__text {
+                    @include fontRaleway(400, $_14px, 16px);
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .features {
+        &-wrap {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            padding: 0 20px;
+            margin-top: 89px;
+            margin-bottom: 80px;
+
+            .features-card {
+                .cadr__title {
+                    margin-bottom: 20px;
+                    @include fontRaleway(900, $_18px, 21px);
+                }
+
+                .card__text {
+                    @include fontRaleway(400, $_14px, 16px);
+                }
             }
         }
     }

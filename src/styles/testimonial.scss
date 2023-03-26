@@ -36,7 +36,7 @@
                 }
 
                 .text-author {
-                    @include font(700, $_13px, 15px);
+                    @include fontRaleway(700, $_13px, 15px);
                     text-transform: uppercase;
                     color: $white;
                     max-width: 470px;
@@ -56,5 +56,70 @@
     .swiper-pagination-bullet-active {
         background: #7E5D6F;
         border: 1px solid #7E5D6F;
+    }
+}
+
+@media(max-width: 1024px) {
+    .swiper {
+        .slide-image {
+            .image-wrap {
+                .slide-image__text {
+                    margin: 0;
+
+                    .text-coment {
+                        max-width: 330px;
+                        @include fontCardo(400, $_24px, 32px);
+                        padding-bottom: 15px;
+                        margin: 47px 104px 0 88px;
+                    }
+
+                    .text-author {
+                        @include fontRaleway(700, $_12px, 14px);
+                        max-width: 330px;
+                        margin: 0 104px 110px 88px;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 9.5px;
+            height: 9.5px;
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .swiper {
+        .slide-image {
+            .image-wrap {
+                flex-direction: column;
+
+                .slide-img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .slide-image__text {
+                    margin: 0;
+
+                    .text-coment {
+                        @include fontCardo(400, $_24px, 32px);
+                        padding: 15px 0;
+                        margin: 0 25px 0 20px;
+                    }
+
+                    .text-author {
+                        @include fontRaleway(700, $_12px, 14px);
+                        margin: 0 15px 95px 10px;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination-bullet {
+            width: 9.5px;
+            height: 9.5px;
+        }
     }
 }

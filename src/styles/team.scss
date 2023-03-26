@@ -19,19 +19,19 @@
     }
 
     .team-card__name {
-        @include font(700, $_24px, 28px);
+        @include fontRaleway(700, $_24px, 28px);
         margin-bottom: 6px;
     }
 
     .team-card__post {
-        @include font(400, $_18px, 21px);
+        @include fontRaleway(400, $_18px, 21px);
         text-transform: uppercase;
         color: $red;
         margin-bottom: 18px
     }
 
     .team-card__text {
-        @include font(400, $_18px, 21px);
+        @include fontRaleway(400, $_18px, 21px);
         margin-bottom: 38px;
     }
 
@@ -41,5 +41,92 @@
 
     .fa-brands {
         @extend %fa-links;
+    }
+}
+
+@media(max-width: 1024px) {
+    .team-wrap {
+        display: flex;
+        padding: 0 20px;
+        margin: 78px 0;
+        gap: 25px;
+
+        .team-card__img img {
+            width: 227px;
+            height: 227px;
+            margin-bottom: 25px;
+        }
+
+        .team-card__name {
+            @include fontRaleway(700, $_18px, 21px);
+            margin-bottom: 5px;
+        }
+
+        .team-card__post {
+            @include fontRaleway(400, $_14px, 16px);
+            text-transform: uppercase;
+            color: $red;
+            margin-bottom: 22px
+        }
+
+        .team-card__text {
+            @include fontRaleway(400, $_14px, 16px);
+            margin-bottom: 39px;
+        }
+
+        .team-card__links {
+            font-size: $_14px;
+        }
+
+        .fa-brands {
+            @extend %fa-links;
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .team-wrap {
+        display: flex;
+        flex-direction: column;
+        margin: 78px 0;
+        gap: 25px;
+
+        .team-card {
+            margin-bottom: 56px;
+
+            .team-card__img img {
+                width: 280px;
+                height: 227px;
+                object-fit: cover;
+                margin-bottom: 25px;
+            }
+
+            .team-card__name {
+                @include fontRaleway(700, $_18px, 21px);
+                margin-bottom: 5px;
+            }
+
+            .team-card__post {
+                @include fontRaleway(400, $_14px, 16px);
+                text-transform: uppercase;
+                color: $red;
+                margin-bottom: 39px
+            }
+
+            .team-card__text {
+                @include fontRaleway(400, $_14px, 16px);
+                margin-bottom: 55px;
+            }
+
+            .team-card__links {
+                font-size: $_14px;
+            }
+
+            // .fa-brands {
+            //     @extend %fa-links;
+            // }
+        }
+
+
     }
 }

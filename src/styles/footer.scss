@@ -18,11 +18,37 @@
         .copyright {
             max-width: 370px;
             text-align: center;
-            @include font(400, $_18px, 21px);
+            @include fontRaleway(400, $_18px, 21px);
             color: $deep-grey;
 
             span {
                 color: $white;
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .footer {
+        &-wrap {
+            padding: 14px 0;
+
+            .copyright {
+                max-width: 314px;
+                @include fontRaleway(400, $_14px, 16px);
+            }
+        }
+    }
+}
+
+@media(max-width: 320px) {
+    .footer {
+        &-wrap {
+            padding: 29px 0;
+
+            .copyright {
+                max-width: 280px;
+                @include fontRaleway(400, $_14px, 16px);
             }
         }
     }

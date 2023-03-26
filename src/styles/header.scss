@@ -13,7 +13,7 @@
     margin: 0 auto;
 
     &-wrap {
-        width: 1170px;
+        max-width: 1170px;
         padding: 0 15px;
         margin: 0 auto;
         display: flex;
@@ -23,7 +23,7 @@
         .header__logo {
             flex-direction: column;
             align-self: center;
-            margin-right: 266px;
+            justify-content: space-between;
         }
 
         .header__link {
@@ -38,7 +38,7 @@
             a {
                 color: $white;
                 padding: 36px 25px;
-                @include font(700, $_13px, 15px);
+                @include fontRaleway(700, $_13px, 15px);
 
                 &:hover {
                     border-bottom: $border-bottom_hover;
@@ -52,4 +52,21 @@
         }
 
     }
+}
+
+@media(max-width: 1024px) {
+    .header {
+        &-wrap {
+            .header__link {
+                a {
+                    padding: 36px 15px;
+                    @include fontRaleway(700, $_12px, 14px);
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 320px) {
+
 }

@@ -15,11 +15,16 @@ $deep-blue: #2C3154;
 
 //font-size
 
+$_12px: 0.75rem;
 $_13px: 0.8125rem;
-$_24px: 1.5rem;
+$_14px: 0.875rem;
+$_16px: 1rem;
 $_18px: 1.125rem;
+$_21px: 1.3125rem;
+$_24px: 1.5rem;
 $_30px: 1.875rem;
 $_36px: 2.25rem;
+$_48px: 3rem;
 $_64px: 4rem;
 
 //border
@@ -35,6 +40,22 @@ $border-fa: 1px solid #C6CBCD;
     border: $border-fa;
     width: 39px;
     height: 39px;
+    padding: 10px 10px;
+    color: $silver;
+}
+
+%fa-links-tablet {
+    border: $border-fa;
+    width: 33px;
+    height: 33px;
+    padding: 9px 9px;
+    color: $silver;
+}
+
+%fa-links-mobil {
+    border: $border-fa;
+    width: 39.61px;
+    height: 39.61px;
     padding: 10px 10px;
     color: $silver;
 }
