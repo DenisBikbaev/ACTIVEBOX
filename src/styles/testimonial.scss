@@ -15,18 +15,20 @@
         margin-bottom: 42px;
 
         .slide-imgage {
-            object-fit: cover;
+            width: 50%;
 
             .slide-img {
-                height: 100%;
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
             }
         }
 
         .slide-text {
-            max-width: 50%;
+            width: 50%;
             padding: 116px 170px 116px 129px;
+            align-self: center;
+            text-transform: capitalize;
 
             .text__coment {
                 @include fontCardo(400, $_36px, 49px);
@@ -65,23 +67,18 @@
 
 @media(max-width: 1024px) {
     .swiper {
-        .slide-image {
-            .image-wrap {
-                .slide-image__text {
-                    margin: 0;
+        .swiper-slide {
+            .slide-text {
+                padding: 47px 104px 110px 88px;
+                align-self: center;
 
-                    .text-coment {
-                        max-width: 330px;
-                        @include fontCardo(400, $_24px, 32px);
-                        padding-bottom: 15px;
-                        margin: 47px 104px 0 88px;
-                    }
+                .text__coment {
+                    @include fontCardo(400, $_24px, 32px);
+                    padding-bottom: 15px
+                }
 
-                    .text-author {
-                        @include fontRaleway(700, $_12px, 14px);
-                        max-width: 330px;
-                        margin: 0 104px 110px 88px;
-                    }
+                .text__author {
+                    @include fontRaleway(700, $_12px, 14px);
                 }
             }
         }
@@ -95,28 +92,33 @@
 
 @media(max-width: 320px) {
     .swiper {
-        .slide-image {
-            .image-wrap {
-                flex-direction: column;
+        .swiper-slide {
+            flex-direction: column;
+
+            .slide-imgage {
+                width: 100%;
+                object-fit: cover;
 
                 .slide-img {
                     width: 100%;
+                    height: 100%;
                     object-fit: cover;
                 }
+            }
 
-                .slide-image__text {
-                    margin: 0;
+            .slide-text {
+                width: 100%;
+                padding: 0 25px 95px 20px;
+                align-self: center;
+                text-align: center;
 
-                    .text-coment {
-                        @include fontCardo(400, $_24px, 32px);
-                        padding: 15px 0;
-                        margin: 0 25px 0 20px;
-                    }
+                .text__coment {
+                    @include fontCardo(400, $_24px, 32px);
+                    padding-bottom: 15px
+                }
 
-                    .text-author {
-                        @include fontRaleway(700, $_12px, 14px);
-                        margin: 0 15px 95px 10px;
-                    }
+                .text__author {
+                    @include fontRaleway(700, $_12px, 14px);
                 }
             }
         }

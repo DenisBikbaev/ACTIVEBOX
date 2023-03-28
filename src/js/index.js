@@ -10,3 +10,9 @@ var swiper = new Swiper(".mySwiper", {
     pageUpDown:true,
   },
 });
+
+$(document).ready(function(){
+  $('.header-burger').click(function(event){
+    $('.header-burger,.header__link').toggleClass('active');
+  });
+});

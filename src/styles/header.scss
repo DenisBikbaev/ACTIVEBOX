@@ -9,8 +9,19 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 20;
     margin: 0 auto;
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 5;
+    }
 
     &-wrap {
         max-width: 1170px;
@@ -24,6 +35,10 @@
             flex-direction: column;
             align-self: center;
             justify-content: space-between;
+        }
+
+        .header-burger {
+            display: none;
         }
 
         .header__link {
@@ -68,5 +83,121 @@
 }
 
 @media(max-width: 320px) {
+    .header {
+        &-wrap {
+            max-width: 280px;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: flex-start;
+            border-bottom: none;
+
+            .header__logo {
+                display: flex;
+                flex-direction: row;
+                align-self: inherit;
+                margin-top: 19px;
+                align-self: flex-start;
+
+                .img__active {
+                    width: 68px;
+                    height: 14px;
+                }
+
+                .img__box {
+                    width: 34px;
+                }
+            }
+
+            .header-burger {
+                display: block;
+                position: relative;
+                width: 30px;
+                height: 20px;
+                top: -15px;
+                left: 230px;
+
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    left: 0;
+                    background: $white;
+                    transition: .2s;
+                }
+
+                &::before {
+                    top: 0;
+                }
+
+                &::after {
+                    bottom: 0;
+                }
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    top: 9px;
+                    background: $white;
+                    transition: .2s;
+                }
+
+                &.active::before {
+                    transform: rotate(45deg);
+                    top: 9px;
+                }
+
+                &.active::after {
+                    transform: rotate(-45deg);
+                    bottom: 9px;
+                }
+
+                &.active {
+                    span {
+                        transform: scale(0);
+                    }
+                }
+            }
+
+            .header__link {
+                position: fixed;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                align-self: flex-start;
+                margin-top: 47px;
+                // background: aqua;
+
+                li {
+                    display: flex;
+                    justify-content: space-evenly;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    color: $white;
+                    padding: 24px 0;
+                    @include fontRaleway(700, $_13px, 15px);
+
+                    &:hover {
+                        border-bottom: none;
+                    }
+
+                    &:active {
+                        color: $deep-red;
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .header__link.active {
+                top: 0;
+            }
+        }
+    }
 
 }
