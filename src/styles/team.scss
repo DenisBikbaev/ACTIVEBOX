@@ -5,12 +5,8 @@
 @import '_variables.scss';
 
 .team-wrap {
-    max-width: 1170px;
-    padding: 0 15px;
-    margin: 0 auto;
     display: flex;
-    margin-top: 114px;
-    margin-bottom: 114px;
+    padding: 114px 0;
     justify-content: space-between;
     gap: 30px;
 
@@ -41,6 +37,12 @@
 
     .fa-brands {
         @extend %fa-links;
+    }
+
+    .fa-brands:hover {
+        @extend %fa-links;
+        background-color: blue;
+        color: red;
     }
 }
 
@@ -84,7 +86,7 @@
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 500px) {
     .team-wrap {
         display: flex;
         flex-direction: column;
