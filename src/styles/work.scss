@@ -27,7 +27,7 @@
             z-index: 2;
             text-align: center;
             opacity: 0;
-            transition: 3s;
+            transition: .3s;
 
             .text__name {
                 @include fontRaleway(900, $_24px, 28px);
@@ -51,7 +51,7 @@
                 border: $border-img;
                 cursor: pointer;
                 opacity: 0.8;
-                transition: 3s;
+                transition: .3s;
             }
         }
 

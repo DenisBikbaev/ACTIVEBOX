@@ -4,15 +4,15 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   grabCursor: true,
-  keyboard:{
+  keyboard: {
     enable: true,
     onlyInViewport: true,
-    pageUpDown:true,
+    pageUpDown: true,
   },
 });
 
-$(document).ready(function(){
-  $('.header-burger').click(function(event){
-    $('.header-burger,.header__link').toggleClass('active');
-  });
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("burger").addEventListener("click", function(){
+    document.querySelector("header").classList.toggle("open")
+  })
 });
